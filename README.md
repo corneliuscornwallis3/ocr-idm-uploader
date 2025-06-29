@@ -1,25 +1,47 @@
-# OCR IDM Uploader – Personal Proof-of-Concept
+# OCR + Infor Document Management Uploader (Proof of Concept)
 
-This is a **personal proof-of-concept project** designed to demonstrate my skills in OCR, automation, and API integrations.  
-It simulates document ingestion, classification, and submission to an API endpoint for storage.
+This project is a **personal proof-of-concept** application developed independently to demonstrate automation, OCR, and document processing capabilities. It is **not affiliated with or derived from any proprietary company source code or internal business data**.
 
-⚠️ **Disclaimer**: This is NOT the same project I developed during employment.  
-This repository contains original code authored independently for demonstration purposes only. No proprietary company data, code, or configurations are used.
+## Overview
+
+This tool automates the classification, extraction, and uploading of scanned PDF documents (like pick tickets, BOLs, invoices, etc.) into an Infor Document Management (IDM) system using API requests.
 
 ## Key Features
-- PDF to image conversion
-- OCR-based text extraction (EasyOCR)
-- Document classification (Pick Ticket, BOL, etc.)
-- API request construction & submission
-- Error handling, logging, rotation retry logic
-- Credential decryption and secure access
 
-## Tech Stack
+- Converts PDF pages into images and applies OCR using EasyOCR.
+- Classifies document types based on detected text patterns.
+- Extracts key fields like order numbers, PO numbers, and customer IDs.
+- Automatically rotates unrecognized pages and retries OCR to improve accuracy.
+- Uploads each page to the appropriate entity in IDM using encrypted credentials.
+- Includes retry, logging, and error-handling mechanisms.
+- Supports multiple document types including:
+  - PICK TICKET
+  - BILL OF LADING
+  - ORDER TO BE INVOICED
+  - WAREHOUSE TRANSFER PICK
+  - PACK LIST
+  - DELIVERY INVOICE
+  - PRE-RECEIVING
+
+## Technologies Used
+
 - Python
 - EasyOCR
-- PDF2Image
-- Wand / PIL
-- OAuth2 / Requests
+- PyPDF2 & pdf2image
+- Wand (for image deskewing)
+- Infor IDM API integration
+- OAuth2 authentication
+- Encrypted credential management (using Fernet)
 
-## How to Run
-See the `main.py` and config template for execution structure.
+## Disclaimer
+
+This project is intended solely for educational and demonstration purposes. All logic and design patterns are original and generic; no part of this code contains proprietary or confidential information from any employer or company system.
+
+## Author
+
+Cory Harris  
+Senior Systems Engineer  
+GitHub: [@corneliuscornwallis3](https://github.com/corneliuscornwallis3)
+
+---
+

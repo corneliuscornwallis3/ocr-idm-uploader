@@ -1,0 +1,8 @@
+easyocr
+pillow
+wand
+pdf2image
+PyPDF2
+cryptography
+requests
+requests-oauthlib

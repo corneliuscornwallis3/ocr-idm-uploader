@@ -1,9 +1,0 @@
-client_id = "" # Client ID for API requests
-token_url = "" # Token URL for API Requests
-api_url = "" # API URL for API Requests
-sfolder_path = "" # Root folder path where the script will read files from
-temp_directory = "" # Temp processing directory path
-deliver_directory = "" # Directory path for successfully processed files
-error_directory = "" # Directory path for unsuccessfully processed files
-archive_directory = "" # Archive directory
-other_directory = "" # Directory path for unrecognized document types

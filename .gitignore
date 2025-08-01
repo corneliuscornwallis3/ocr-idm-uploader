@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-*.pyo
-*.log
-*.env
-secret.key
-credentials.enc
-.vscode/
-.DS_Store
